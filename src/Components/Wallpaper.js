@@ -16,7 +16,7 @@ class Wallpaper extends React.Component {
     handleLocationChange = (event) => {
         const locationId = event.target.value;
         sessionStorage.setItem('locationId', locationId);
-        
+
         axios({
             method: 'GET',
             url: `https://limitless-refuge-87216.herokuapp.com/restaurants/${locationId}`,
@@ -24,7 +24,6 @@ class Wallpaper extends React.Component {
         })
             .then(response => {
                 this.setState({ restaurants: response.data.restaurants, inputText: '' })
-                console.log(response.data.restaurants, "restaurants data")
             })
             .catch()
     }
