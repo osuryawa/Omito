@@ -211,7 +211,7 @@ class Filter extends React.Component {
                                 <div id="filter" className="collapse show">
                                     <div className="Select-Location">Select Location</div>
                                     <select className="Rectangle-2236" onChange={this.handleLocationChange}>
-                                        <option value="0">Select</option>
+                                        <option value="0">Select</option> 
                                         {locations.map((item) => {
                                             return <option value={item.location_id}>{`${item.name}, ${item.city}`}</option>
                                         })}
@@ -307,7 +307,7 @@ class Filter extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div > //test branch
         )
     }
 }
